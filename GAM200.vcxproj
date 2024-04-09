@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{72219DA4-6E9A-4BB6-B18C-9592B9529615}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GAM200</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>GAM200</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\Bin\Platform\</OutDir>
+    <TargetName>Plasma_D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\Bin\Platform\</OutDir>
+    <TargetName>Plasma_R</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MinSpace</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\Dep\FMOD\Include;..\GAM200;..\Dep\freetype\Include;..\Dep\glew\Include;..\Dep\SOIL\Include;..\Dep\glm\Include;..\Dep\imgui\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenGL32.lib;glew32s.lib;freetype.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Dep\SOIL\Lib;..\Dep\freetype\Lib;..\Dep\glew\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>fmod64_vc.lib;OpenGL32.lib;glew32s.lib;freetype.lib;SOIL.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Dep\FMOD\Lib;..\Dep\SOIL\Lib;..\Dep\freetype\Lib;..\Dep\glew\Lib</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Dep\FMOD\Include;..\GAM200;..\Dep\freetype\Include;..\Dep\glew\Include;..\Dep\SOIL\Include;..\Dep\glm\Include;..\Dep\imgui\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenGL32.lib;glew32s.lib;SOIL.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Dep\freetype\Lib;..\Dep\glew\Lib;..\Dep\glm\Lib;..\Dep\SOIL\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>OpenGL32.lib;glew32s.lib;freetype.lib;SOIL.lib;fmod64_vc.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Dep\SOIL\Lib;..\Dep\freetype\Lib;..\Dep\glew\Lib;..\Dep\FMOD\Lib;</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AlarmClockScript.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="AnimationComponent.h" />
+    <ClInclude Include="AnimationManager.h" />
+    <ClInclude Include="Animator.h" />
+    <ClInclude Include="BananaScript.h" />
+    <ClInclude Include="Body.h" />
+    <ClInclude Include="BoxCollider.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CHASE_STATE.h" />
+    <ClInclude Include="ComicScript.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="ComponentCreator.h" />
+    <ClInclude Include="ComponentTypeIds.h" />
+    <ClInclude Include="Composition.h" />
+    <ClInclude Include="ConfirmQuitScript.h" />
+    <ClInclude Include="DebugDraw.h" />
+    <ClInclude Include="DISTRACTED_STATE.h" />
+    <ClInclude Include="DoorScript.h" />
+    <ClInclude Include="Emitter.h" />
+    <ClInclude Include="EmitterDynamic.h" />
+    <ClInclude Include="EmitterStatic.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="Factory.h" />
+    <ClInclude Include="FireAlarmScript.h" />
+    <ClInclude Include="FModSound.h" />
+    <ClInclude Include="FModSoundCPP.h" />
+    <ClInclude Include="FModSoundManager.h" />
+    <ClInclude Include="ForceManager.h" />
+    <ClInclude Include="ForceTypes.h" />
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="FrameBuffer.h" />
+    <ClInclude Include="GAM200.h" />
+    <ClInclude Include="GraphicsVerticesType.h" />
+    <ClInclude Include="Force.h" />
+    <ClInclude Include="HomeWorkScript.h" />
+    <ClInclude Include="IDLE_STATE.h" />
+    <ClInclude Include="imgui_impl_opengl3.h" />
+    <ClInclude Include="imgui_impl_win32.h" />
+    <ClInclude Include="InteractablesFeedbackScript.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="JsonHeaders.h" />
+    <ClInclude Include="LoadingScreenScript.h" />
+    <ClInclude Include="LoseScript.h" />
+    <ClInclude Include="MainMenuScript.h" />
+    <ClInclude Include="MouseCursorScript.h" />
+    <ClInclude Include="MyGui_ArcheType.h" />
+    <ClInclude Include="MyGui_Game.h" />
+    <ClInclude Include="MyGui_Gizmo.h" />
+    <ClInclude Include="MyGui_Performance.h" />
+    <ClInclude Include="MyGui_Property.h" />
+    <ClInclude Include="List_StateLinker.h" />
+    <ClInclude Include="LogicComponent.h" />
+    <ClInclude Include="MyGraphicsFormat.h" />
+    <ClInclude Include="MyGui.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Logic.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="MyGuiManager.h" />
+    <ClInclude Include="MyGui_Menubar.h" />
+    <ClInclude Include="MyGui_Scene.h" />
+    <ClInclude Include="MyGui_TileEditor.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="ObjectAllocator.h" />
+    <ClInclude Include="ParticleManager.h" />
+    <ClInclude Include="PathFind.h" />
+    <ClInclude Include="PATROL_STATE.h" />
+    <ClInclude Include="PauseMenuScript.h" />
+    <ClInclude Include="Physics.h" />
+    <ClInclude Include="PrefectScript.h" />
+    <ClInclude Include="PrefectScript1.h" />
+    <ClInclude Include="PrefectScript2.h" />
+    <ClInclude Include="PrefectScript3.h" />
+    <ClInclude Include="PrefectScript4.h" />
+    <ClInclude Include="PrefectScript5.h" />
+    <ClInclude Include="PrefectScript6.h" />
+    <ClInclude Include="PrefectScript7.h" />
+    <ClInclude Include="RapidjsonSerialization.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="ResultScript.h" />
+    <ClInclude Include="RubbishBin.h" />
+    <ClInclude Include="Score.h" />
+    <ClInclude Include="ScriptButton.h" />
+    <ClInclude Include="ScriptButtonBack.h" />
+    <ClInclude Include="ScriptButtonCredits.h" />
+    <ClInclude Include="ScriptButtonHowToPlay.h" />
+    <ClInclude Include="ScriptButtonMainMenu.h" />
+    <ClInclude Include="ScriptButtonNextStage.h" />
+    <ClInclude Include="ScriptButtonNo.h" />
+    <ClInclude Include="ScriptButtonQuit.h" />
+    <ClInclude Include="ScriptButtonRestart.h" />
+    <ClInclude Include="ScriptButtonResume.h" />
+    <ClInclude Include="ScriptButtonSettings.h" />
+    <ClInclude Include="ScriptButtonStart.h" />
+    <ClInclude Include="ScriptButtonYes.h" />
+    <ClInclude Include="ScriptCheckBoxFullScreen.h" />
+    <ClInclude Include="ScriptCheckBoxMute.h" />
+    <ClInclude Include="SettingsMenuScript.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="SmokeFeedbackScript.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteComponent.h" />
+    <ClInclude Include="SpriteList.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="StateEnum.h" />
+    <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="StudentScript1.h" />
+    <ClInclude Include="TeacherScript.h" />
+    <ClInclude Include="TextScript.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="NPCScript.h" />
+    <ClInclude Include="TimeManager.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Transition.h" />
+    <ClInclude Include="PlayerScript.h" />
+    <ClInclude Include="RenderBuffer.h" />
+    <ClInclude Include="Script.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="SpriteManager.h" />
+    <ClInclude Include="TextRenderer.h" />
+    <ClInclude Include="TransitionScript.h" />
+    <ClInclude Include="TutorialScript1.h" />
+    <ClInclude Include="UIScript.h" />
+    <ClInclude Include="Utility.h" />
+    <ClInclude Include="CoreEngine.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GraphicsLayer.h" />
+    <ClInclude Include="IndexBuffer.h" />
+    <ClInclude Include="ISerialization.h" />
+    <ClInclude Include="Mat4x4.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="OpenGLIncludes.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Vendor\ImGuizmo\ImCurveEdit.h" />
+    <ClInclude Include="Vendor\ImGuizmo\ImGradient.h" />
+    <ClInclude Include="Vendor\ImGuizmo\ImGuizmo.h" />
+    <ClInclude Include="VertexArray.h" />
+    <ClInclude Include="VertexBuffer.h" />
+    <ClInclude Include="VertexBufferLayout.h" />
+    <ClInclude Include="VolumeDownScript.h" />
+    <ClInclude Include="VolumeUpScript.h" />
+    <ClInclude Include="WaterBottleScript.h" />
+    <ClInclude Include="WaterCoolerScript.h" />
+    <ClInclude Include="WaterScript.h" />
+    <ClInclude Include="WinConditionScript.h" />
+    <ClInclude Include="WindowsIncludes.h" />
+    <ClInclude Include="WindowsSystem.h" />
+    <ClInclude Include="TextSerialization.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="Vector2.h" />
+    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="WinScript.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AlarmClockScript.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="AnimationComponent.cpp" />
+    <ClCompile Include="AnimationManager.cpp" />
+    <ClCompile Include="Animator.cpp" />
+    <ClCompile Include="BananaScript.cpp" />
+    <ClCompile Include="Body.cpp" />
+    <ClCompile Include="BoxCollider.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CHASE_STATE.cpp" />
+    <ClCompile Include="ComicScript.cpp" />
+    <ClCompile Include="Composition.cpp" />
+    <ClCompile Include="ConfirmQuitScript.cpp" />
+    <ClCompile Include="CoreEngine.cpp" />
+    <ClCompile Include="DebugDraw.cpp" />
+    <ClCompile Include="DISTRACTED_STATE.cpp" />
+    <ClCompile Include="DoorScript.cpp" />
+    <ClCompile Include="Emitter.cpp" />
+    <ClCompile Include="EmitterDynamic.cpp" />
+    <ClCompile Include="EmitterStatic.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="FireAlarmScript.cpp" />
+    <ClCompile Include="FModSound.cpp" />
+    <ClCompile Include="FModSoundCPP.cpp" />
+    <ClCompile Include="FModSoundManager.cpp" />
+    <ClCompile Include="Force.cpp" />
+    <ClCompile Include="ForceManager.cpp" />
+    <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="GAM200.cpp" />
+    <ClCompile Include="GraphicsVerticesType.cpp" />
+    <ClCompile Include="HomeWorkScript.cpp" />
+    <ClCompile Include="IDLE_STATE.cpp" />
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="imgui_demo.cpp" />
+    <ClCompile Include="imgui_draw.cpp" />
+    <ClCompile Include="imgui_impl_opengl3.cpp" />
+    <ClCompile Include="imgui_impl_win32.cpp" />
+    <ClCompile Include="InteractablesFeedbackScript.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="LoadingScreenScript.cpp" />
+    <ClCompile Include="LoseScript.cpp" />
+    <ClCompile Include="MainMenuScript.cpp" />
+    <ClCompile Include="MouseCursorScript.cpp" />
+    <ClCompile Include="MyGui_ArcheType.cpp" />
+    <ClCompile Include="MyGui_Game.cpp" />
+    <ClCompile Include="MyGui_Gizmo.cpp" />
+    <ClCompile Include="MyGui_Performance.cpp" />
+    <ClCompile Include="MyGui_Property.cpp" />
+    <ClCompile Include="LogicComponent.cpp" />
+    <ClCompile Include="MyGraphicsFormat.cpp" />
+    <ClCompile Include="MyGui.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="GraphicsLayer.cpp" />
+    <ClCompile Include="IndexBuffer.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Logic.cpp" />
+    <ClCompile Include="Mat4x4.cpp" />
+    <ClCompile Include="MyGuiManager.cpp" />
+    <ClCompile Include="MyGui_Menubar.cpp" />
+    <ClCompile Include="MyGui_Scene.cpp" />
+    <ClCompile Include="MyGui_TileEditor.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="ObjectAllocator.cpp" />
+    <ClCompile Include="ParticleManager.cpp" />
+    <ClCompile Include="PathFind.cpp" />
+    <ClCompile Include="PATROL_STATE.cpp" />
+    <ClCompile Include="PauseMenuScript.cpp" />
+    <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="PlayerScript.cpp" />
+    <ClCompile Include="PrefectScript.cpp" />
+    <ClCompile Include="PrefectScript1.cpp" />
+    <ClCompile Include="PrefectScript2.cpp" />
+    <ClCompile Include="PrefectScript3.cpp" />
+    <ClCompile Include="PrefectScript4.cpp" />
+    <ClCompile Include="PrefectScript5.cpp" />
+    <ClCompile Include="PrefectScript6.cpp" />
+    <ClCompile Include="PrefectScript7.cpp" />
+    <ClCompile Include="RenderBuffer.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="ResultScript.cpp" />
+    <ClCompile Include="RubbishBin.cpp" />
+    <ClCompile Include="Score.cpp" />
+    <ClCompile Include="Script.cpp" />
+    <ClCompile Include="ScriptButton.cpp" />
+    <ClCompile Include="ScriptButtonBack.cpp" />
+    <ClCompile Include="ScriptButtonCredits.cpp" />
+    <ClCompile Include="ScriptButtonHowToPlay.cpp" />
+    <ClCompile Include="ScriptButtonMainMenu.cpp" />
+    <ClCompile Include="ScriptButtonNextStage.cpp" />
+    <ClCompile Include="ScriptButtonNo.cpp" />
+    <ClCompile Include="ScriptButtonQuit.cpp" />
+    <ClCompile Include="ScriptButtonRestart.cpp" />
+    <ClCompile Include="ScriptButtonResume.cpp" />
+    <ClCompile Include="ScriptButtonSettings.cpp" />
+    <ClCompile Include="ScriptButtonStart.cpp" />
+    <ClCompile Include="ScriptButtonYes.cpp" />
+    <ClCompile Include="ScriptCheckBoxFullScreen.cpp" />
+    <ClCompile Include="ScriptCheckBoxMute.cpp" />
+    <ClCompile Include="SettingsMenuScript.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="FrameBuffer.cpp" />
+    <ClCompile Include="SmokeFeedbackScript.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="SpriteComponent.cpp" />
+    <ClCompile Include="SpriteList.cpp" />
+    <ClCompile Include="SpriteManager.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
+    <ClCompile Include="NPCScript.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StudentScript1.cpp" />
+    <ClCompile Include="TeacherScript.cpp" />
+    <ClCompile Include="TextRenderer.cpp" />
+    <ClCompile Include="TextScript.cpp" />
+    <ClCompile Include="TextSerialization.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TimeManager.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="Transition.cpp" />
+    <ClCompile Include="TransitionScript.cpp" />
+    <ClCompile Include="TutorialScript1.cpp" />
+    <ClCompile Include="UIScript.cpp" />
+    <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="Vendor\ImGuizmo\ImCurveEdit.cpp" />
+    <ClCompile Include="Vendor\ImGuizmo\ImGradient.cpp" />
+    <ClCompile Include="Vendor\ImGuizmo\ImGuizmo.cpp" />
+    <ClCompile Include="VertexArray.cpp" />
+    <ClCompile Include="VertexBuffer.cpp" />
+    <ClCompile Include="VertexBufferLayout.cpp" />
+    <ClCompile Include="VolumeDownScript.cpp" />
+    <ClCompile Include="VolumeUpScript.cpp" />
+    <ClCompile Include="WaterBottleScript.cpp" />
+    <ClCompile Include="WaterCoolerScript.cpp" />
+    <ClCompile Include="WaterScript.cpp" />
+    <ClCompile Include="WinConditionScript.cpp" />
+    <ClCompile Include="WindowsSystem.cpp" />
+    <ClCompile Include="WinScript.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GAM200.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GAM200.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\Graphics\shader.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
